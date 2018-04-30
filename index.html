@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        CSS Spinners
+    </title>
+    <link rel="stylesheet" href="main.css">
+<body>
+    <div class="main">
+        <h1> Hello, Welcome to my website</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium labore facilis atque! Illum voluptates dolorem accusamus maxime dolore id voluptas dolorum, sint explicabo quasi, quaerat ea qui rem distinctio consectetur blanditiis cum ab sequi. Ipsa in exercitationem excepturi non facere officia, illo voluptatum obcaecati ullam laudantium asperiores natus doloribus nulla!
+        </p>
+    </div> 
+
+    <script>
+        document.querySelector('.main p ').style.display = 'none';
+        document.querySelector('.main').classList.add('spinner-1');
+
+        //Mimic server request
+        //takes 2 param (function, sec in milli)
+        setTimeout(() => {
+            document.querySelector('.main').classList.remove('spinner-1');
+            document.querySelector('.main p ').style.display = 'block';
+        }, 4000);
+    </script>
+
+</body>  
+</head>
+</html>
